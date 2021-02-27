@@ -4,10 +4,13 @@ let $input = $(".char-input")
 let inputVal
 let charStats 
 let $charName = $(".char-name")
+let $li = $(".height")
 
 
 //event listener func on submit button
 $(".submit").on("click", getCharStats)
+//event listener for buttons
+$(".char-stats").on("click", addStats)
 
 //event listener for retrieving character data 
 function getCharStats(e) {
@@ -19,9 +22,12 @@ function getCharStats(e) {
     $.ajax(url + inputVal)
     //success: 
     .then(function(stats) {
-        console.log(stats)
+        // console.log(stats)
         charStats = stats
+        //change h2 to char's name
         addName()
+        //clear input
+        $input.val("")
     }, 
     //error:
     function(error) {
@@ -32,4 +38,9 @@ function getCharStats(e) {
 //change h2 to character's name
 function addName() {
     $charName.text(charStats.results[0].name)
+}
+
+//adds char main stats 
+function addStats() {
+    $li.text("Height: " + charStats.results[0].height)
 }
