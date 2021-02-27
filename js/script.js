@@ -5,7 +5,7 @@ let inputVal
 let charStats 
 let $charName = $(".char-name")
 let $ul = $(".char-stat-list")
-
+let shipStats 
 
 //event listener func on submit button
 $(".submit").on("click", getCharStats)
@@ -22,7 +22,7 @@ function getCharStats(e) {
     $.ajax(url + inputVal)
     //success: 
     .then(function(stats) {
-        // console.log(stats)
+        console.log(stats)
         charStats = stats
         //change h2 to char's name
         addName()
@@ -35,16 +35,31 @@ function getCharStats(e) {
     })
 }
 
-//change h2 to character's name
+//changes h2 to character's name
 function addName() {
     $charName.text(charStats.results[0].name)
 }
 
-//adds char main stats 
+//function to retrieve ship stats 
+function getShipStats() {
+    $.ajax("https://swapi.dev/api/starships/12/")
+    //success
+    .then(function(stats) {
+        shipStats = stats
+        // console.log(shipStats.name)
+        }, 
+        //error
+        function(error) {
+        console.log(error)
+        })
+    }
+
+//event listener func, adds basic stats to DOM when stats button clicked 
 function addStats() {
+    getShipStats()
     $ul.html(
         `<li> Height: ${charStats.results[0].height} </li>
-        <li> Height: ${charStats.results[0].height} </li>`
-    )
-    
+        <li> Birth year: ${charStats.results[0].birth_year} </li>
+        <li> Starship: ${shipStats.name} </li>`)
 }
+
