@@ -4,7 +4,7 @@ let $input = $(".char-input")
 let inputVal
 let charStats 
 let $charName = $(".char-name")
-let $li = $(".height")
+let $ul = $(".char-stat-list")
 
 
 //event listener func on submit button
@@ -42,5 +42,9 @@ function addName() {
 
 //adds char main stats 
 function addStats() {
-    $li.text("Height: " + charStats.results[0].height)
+    $ul.html(
+        `<li> Height: ${charStats.results[0].height} </li>
+        <li> Height: ${charStats.results[0].height} </li>`
+    )
+    
 }
