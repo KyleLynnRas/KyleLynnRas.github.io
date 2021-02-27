@@ -2,6 +2,9 @@
 let url = "https://swapi.dev/api/people/?search="
 let $input = $(".char-input")
 let inputVal
+let charStats 
+let $charName = $(".char-name")
+
 
 //event listener func on submit button
 $(".submit").on("click", getCharStats)
@@ -17,6 +20,8 @@ function getCharStats(e) {
     //success: 
     .then(function(stats) {
         console.log(stats)
+        charStats = stats
+        addName()
     }, 
     //error:
     function(error) {
@@ -24,3 +29,7 @@ function getCharStats(e) {
     })
 }
 
+//change h2 to character's name
+function addName() {
+    $charName.text(charStats.results[0].name)
+}
