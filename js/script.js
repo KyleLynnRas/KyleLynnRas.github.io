@@ -32,6 +32,7 @@ function getCharStats(e) {
     //error:
     function(error) {
         console.log(error)
+        alert("Character not found, please try again", error)
     })
 }
 
@@ -40,26 +41,23 @@ function addName() {
     $charName.text(charStats.results[0].name)
 }
 
-//function to retrieve ship stats 
-function getShipStats() {
+//event listener func, retrieves ship stats and adds basic stats to DOM on click 
+function addStats() {
     $.ajax("https://swapi.dev/api/starships/12/")
     //success
     .then(function(stats) {
         shipStats = stats
         // console.log(shipStats.name)
+        //add stats to DOM 
+        $ul.html(
+            `<li> Birth year: ${charStats.results[0].birth_year} </li>
+            <li> Eye color: ${charStats.results[0].eye_color} </li>
+            <li> Height: ${charStats.results[0].height} </li>
+            <li> Starship: ${shipStats.name} </li>`)
         }, 
         //error
         function(error) {
         console.log(error)
         })
-    }
-
-//event listener func, adds basic stats to DOM when stats button clicked 
-function addStats() {
-    getShipStats()
-    $ul.html(
-        `<li> Height: ${charStats.results[0].height} </li>
-        <li> Birth year: ${charStats.results[0].birth_year} </li>
-        <li> Starship: ${shipStats.name} </li>`)
 }
 
