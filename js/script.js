@@ -74,7 +74,7 @@ function addStats() {
             <li> Eye color: ${charStats.results[0].eye_color} </li>
             <li> Height: ${charStats.results[0].height} </li>
             <li> Starship: ${shipStats.name} </li>
-            `)
+            <li> Homeworld: ${planet} </li>`)
         }, 
         //error
         function(error) {
@@ -89,9 +89,9 @@ function getHomeWorld() {
     //success
     .then(function(stats) {
         homeStats = stats
-        console.log(homeStats)
+        // console.log(homeStats)
         planet = homeStats.name
-        console.log(planet)
+        // console.log(planet)
     },
     //error
     function(error) {
