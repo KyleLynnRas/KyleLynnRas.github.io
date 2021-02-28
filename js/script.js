@@ -9,6 +9,7 @@ let shipStats
 let starShip 
 let homeWorld
 let homeStats
+let planet
 
 //event listener func on submit button
 $(".submit").on("click", getCharStats)
@@ -34,9 +35,11 @@ function getCharStats(e) {
             // console.log(charStats.results[0].starships[0])
             //starship
             starShip = charStats.results[0].starships[0]
-            //hometown 
+            //homeworld
             // console.log(charStats.results[0].homeworld)
             homeWorld = charStats.results[0].homeworld
+            //func to get homeworld's info 
+            getHomeWorld()
             //change h2 to char's name
             addName()
             //clear input
@@ -70,7 +73,8 @@ function addStats() {
             `<li> Birth year: ${charStats.results[0].birth_year} </li>
             <li> Eye color: ${charStats.results[0].eye_color} </li>
             <li> Height: ${charStats.results[0].height} </li>
-            <li> Starship: ${shipStats.name} </li>`)
+            <li> Starship: ${shipStats.name} </li>
+            `)
         }, 
         //error
         function(error) {
@@ -86,6 +90,8 @@ function getHomeWorld() {
     .then(function(stats) {
         homeStats = stats
         console.log(homeStats)
+        planet = homeStats.name
+        console.log(planet)
     },
     //error
     function(error) {
