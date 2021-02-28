@@ -10,6 +10,18 @@ header {
    margin: 50px auto 30px auto;
 }
 
+/*----- HEADER SECTION -------*/
+
+/*----- FORM -------*/
+form {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.char-name {
+    margin-bottom: 15px;;
+}
+
 
 
 
