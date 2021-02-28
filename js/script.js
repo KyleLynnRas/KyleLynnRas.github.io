@@ -81,7 +81,7 @@ function addStats() {
         shipStats = stats
         console.log(shipStats)
         // console.log(shipStats.name)
-        //add toggle effect onclick, ul slides up/down
+        //add toggle effect on click, ul slides up/down
         $ul.slideToggle()
         //add stats to DOM 
         $ul.html(
@@ -127,16 +127,18 @@ const addShipStats = () => {
     if (charStats.results[0].starships.length === 0){
         alert(`${charStats.results[0].name} doesn't have a starship`)
     } else {
-    $ulShip.html(
-        `<li>Name: ${shipStats.name}</li>
-        <li>Model: ${shipStats.model}</li>
-        <li>Manufacturer: ${shipStats.manufacturer}</li>
-        <li>Starship class: ${shipStats.starship_class}</li>
-        <li>Cargo capacity: ${shipStats.cargo_capacity}</li>
-        <li>Length: ${shipStats.length}</li>
-        <li>Hyperdrive Rating: ${shipStats.hyperdrive_rating}</li>
-        <li>Crew: ${shipStats.crew}</li>`
-        )
+        //add toggle effect on click, ul slides up/down
+        $ulShip.slideToggle()
+        $ulShip.html(
+            `<li>Name: ${shipStats.name}</li>
+            <li>Model: ${shipStats.model}</li>
+            <li>Manufacturer: ${shipStats.manufacturer}</li>
+            <li>Starship class: ${shipStats.starship_class}</li>
+            <li>Cargo capacity: ${shipStats.cargo_capacity}</li>
+            <li>Length: ${shipStats.length}</li>
+            <li>Hyperdrive Rating: ${shipStats.hyperdrive_rating}</li>
+            <li>Crew: ${shipStats.crew}</li>`
+            )
     }
 }
 
