@@ -81,6 +81,8 @@ function addStats() {
         shipStats = stats
         console.log(shipStats)
         // console.log(shipStats.name)
+        //add toggle effect onclick, ul slides up/down
+        $ul.slideToggle()
         //add stats to DOM 
         $ul.html(
             `<li> Birth year: ${charStats.results[0].birth_year} </li>
