@@ -6,6 +6,7 @@ let charStats
 let $charName = $(".char-name")
 let $ul = $(".char-stat-list")
 let shipStats 
+let starShip 
 
 //event listener func on submit button
 $(".submit").on("click", getCharStats)
@@ -28,10 +29,12 @@ function getCharStats(e) {
         if (charStats.results.length === 0) {
             alert("character not found, please try again")
         } else {
-        //change h2 to char's name
-        addName()
-        //clear input
-        $input.val("")
+            // console.log(charStats.results[0].starships[0])
+            starShip = charStats.results[0].starships[0]
+            //change h2 to char's name
+            addName()
+            //clear input
+            $input.val("")
         }
     }, 
     //error:
@@ -48,7 +51,8 @@ function addName() {
 
 //event listener func, retrieves ship stats and adds basic stats to DOM on click 
 function addStats() {
-    $.ajax("https://swapi.dev/api/starships/12/")
+    //pulls first starship's info for char chosen
+    $.ajax(starShip)
     //success
     .then(function(stats) {
         shipStats = stats
@@ -65,4 +69,3 @@ function addStats() {
         console.log(error)
         })
 }
-
