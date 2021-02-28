@@ -7,6 +7,8 @@ let $charName = $(".char-name")
 let $ul = $(".char-stat-list")
 let shipStats 
 let starShip 
+let homeWorld
+let homeStats
 
 //event listener func on submit button
 $(".submit").on("click", getCharStats)
@@ -30,7 +32,11 @@ function getCharStats(e) {
             alert("character not found, please try again")
         } else {
             // console.log(charStats.results[0].starships[0])
+            //starship
             starShip = charStats.results[0].starships[0]
+            //hometown 
+            // console.log(charStats.results[0].homeworld)
+            homeWorld = charStats.results[0].homeworld
             //change h2 to char's name
             addName()
             //clear input
@@ -71,3 +77,19 @@ function addStats() {
         console.log(error)
         })
 }
+
+//function to retrieve homeWorld info 
+function getHomeWorld() {
+    //pull homeworld's info for char chosen 
+    $.ajax(homeWorld) 
+    //success
+    .then(function(stats) {
+        homeStats = stats
+        console.log(homeStats)
+    },
+    //error
+    function(error) {
+        console.log(error)
+    })
+}
+
