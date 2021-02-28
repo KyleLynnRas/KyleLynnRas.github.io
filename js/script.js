@@ -28,6 +28,10 @@ function getCharStats(e) {
     e.preventDefault()
     //char name from input
     inputVal = $input.val()
+    //added error alert if input val empty
+    if (inputVal === ("")){
+        alert("please enter a character name")
+    } else {
     //pull from api url
     $.ajax(url + inputVal)
     //success: 
@@ -60,7 +64,7 @@ function getCharStats(e) {
     function(error) {
         console.log(error)
     })
-
+}
 }
 
 //changes h2 to character's name
