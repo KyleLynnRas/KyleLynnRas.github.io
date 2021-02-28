@@ -113,11 +113,15 @@ const $ulShip = $(".ship-stat-list")
 const addShipStats = () => {
     $ulShip.html(
         `<li>Name: ${shipStats.name}</li>
-        <li>Model: ${shipStats.model}</li>`
+        <li>Model: ${shipStats.model}</li>
+        <li>Manufacturer: ${shipStats.manufacturer}</li>
+        <li>Starship class: ${shipStats.starship_class}</li>
+        <li>Cargo capacity: ${shipStats.cargo_capacity}</li>
+        <li>Length: ${shipStats.length}</li>
+        <li>Hyperdrive Rating: ${shipStats.hyperdrive_rating}</li>
+        <li>Crew: ${shipStats.crew}</li>`
     )
 }
-
-
 
 //event listener for button for ship stats
 $(".ship-btn").on("click", addShipStats)
