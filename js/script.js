@@ -1,3 +1,7 @@
+////////////////////////////
+//Character stats section///
+///////////////////////////
+
 //char-stats variables 
 let url = "https://swapi.dev/api/people/?search="
 let $input = $(".char-input")
@@ -105,7 +109,7 @@ function getHomeWorld() {
 }
 
 ////////////////////////
-//// Ship stats ///////
+// Ship stats section//
 //////////////////////
 
 //variable for ul for ship stats 
@@ -113,6 +117,10 @@ const $ulShip = $(".ship-stat-list")
 
 //event listener func to add ship stats to DOM on click
 const addShipStats = () => {
+    //if char doesn't have starship stats, error alert
+    if (charStats.results[0].starships.length === 0){
+        alert(`${charStats.results[0].name} doesn't have a starship`)
+    } else {
     $ulShip.html(
         `<li>Name: ${shipStats.name}</li>
         <li>Model: ${shipStats.model}</li>
@@ -122,7 +130,8 @@ const addShipStats = () => {
         <li>Length: ${shipStats.length}</li>
         <li>Hyperdrive Rating: ${shipStats.hyperdrive_rating}</li>
         <li>Crew: ${shipStats.crew}</li>`
-    )
+        )
+    }
 }
 
 //event listener for button for ship stats
