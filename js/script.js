@@ -48,6 +48,8 @@ function getCharStats(e) {
             $input.val("")
             //clear prior char's stats
             $ul.html("")
+            //clear prior ship stats
+            $ulShip.html("")
         }
     }, 
     //error:
