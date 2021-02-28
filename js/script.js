@@ -35,6 +35,8 @@ function getCharStats(e) {
             addName()
             //clear input
             $input.val("")
+            //clear prior char's stats
+            $ul.html("")
         }
     }, 
     //error:
