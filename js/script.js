@@ -11,10 +11,12 @@ let homeWorld
 let homeStats
 let planet
 
-//event listener func on submit button
+
+//event listener func on submit button for char selection
 $(".submit").on("click", getCharStats)
-//event listener for buttons
+//event listener for button for char stats 
 $(".char-stats").on("click", addStats)
+
 
 //event listener for retrieving character data 
 function getCharStats(e) {
@@ -67,6 +69,7 @@ function addStats() {
     //success
     .then(function(stats) {
         shipStats = stats
+        console.log(shipStats)
         // console.log(shipStats.name)
         //add stats to DOM 
         $ul.html(
@@ -99,3 +102,22 @@ function getHomeWorld() {
     })
 }
 
+////////////////////////
+//// Ship stats ///////
+//////////////////////
+
+//variable for ul for ship stats 
+const $ulShip = $(".ship-stat-list")
+
+//event listener func to add ship stats to DOM on click
+const addShipStats = () => {
+    $ulShip.html(
+        `<li>Name: ${shipStats.name}</li>
+        <li>Model: ${shipStats.model}</li>`
+    )
+}
+
+
+
+//event listener for button for ship stats
+$(".ship-btn").on("click", addShipStats)
