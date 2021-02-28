@@ -24,16 +24,21 @@ function getCharStats(e) {
     .then(function(stats) {
         console.log(stats)
         charStats = stats
+        //error alert if it returns a blank array/char not found
+        if (charStats.results.length === 0) {
+            alert("character not found, please try again")
+        } else {
         //change h2 to char's name
         addName()
         //clear input
         $input.val("")
+        }
     }, 
     //error:
     function(error) {
         console.log(error)
-        alert("Character not found, please try again", error)
     })
+
 }
 
 //changes h2 to character's name
