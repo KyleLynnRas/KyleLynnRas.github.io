@@ -35,6 +35,8 @@ form {
 
 .char-img {
     margin-bottom: 10px;
+    width: 50%;
+    max-width: 200px;
 }
 
 .char-btn {
@@ -44,6 +46,8 @@ form {
 /*--char/ship stats list--*/
 ul {
     list-style: none;
+    width: 50%;
+    max-width: 200px;
 }
 
 /*----- SHIP STATS -------*/
@@ -58,6 +62,8 @@ ul {
 
 .ship-img {
     margin-bottom: 10px;
+    width: 50%;
+    max-width: 200px;
 }
 
 .ship-btn {
