@@ -43,9 +43,9 @@ function getCharStats(e) {
             alert("character not found, please try again")
         } else {
             // console.log(charStats.results[0].starships[0])
-            //starship
+            //starship url
             starShip = charStats.results[0].starships[0]
-            //homeworld
+            //homeworld url
             // console.log(charStats.results[0].homeworld)
             homeWorld = charStats.results[0].homeworld
             //func to get homeworld's info 
@@ -144,3 +144,18 @@ const addShipStats = () => {
 
 //event listener for button for ship stats
 $(".ship-btn").on("click", addShipStats)
+
+
+////////////////////////////
+// Homeworld stats section//
+///////////////////////////
+const $ulHome = $(".home-stat-list")
+
+const addHomeStats = () => {
+    console.log(homeStats.name)
+    $ulHome.html(
+        `<li>Name: ${planet}</li>`
+    )
+}
+//event listener for button for homeworld stats
+$(".home-btn").on("click", addHomeStats)
