@@ -19,7 +19,7 @@ let planet
 //event listener func on submit button for char selection
 $(".submit").on("click", getCharStats)
 //event listener for button for char stats 
-$(".char-stats").on("click", addStats)
+$(".char-btn").on("click", addStats)
 
 
 //event listener for retrieving character data 
