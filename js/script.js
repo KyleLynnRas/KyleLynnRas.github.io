@@ -173,12 +173,20 @@ $(".home-btn").on("click", addHomeStats)
 // Films stats section/////
 ///////////////////////////
 
+const $ulFilm = $(".film-stat-list")
+//event listener func, loop through filmsArr and retrieve api info/add to DOM on click
 const addFilmStats = () => {
     for (let film of filmsArr){
-        console.log(film)
+        // console.log(film)
+        $.ajax(film)
+            .then(function(filmStats) {
+                console.log(filmStats.title)
+            },
+            function(error) {
+                console.log(error)
+            })
+        }
     }
-
-}
 
 //event listener for button for film stats
 $(".film-btn").on("click", addFilmStats)
