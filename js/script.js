@@ -152,6 +152,8 @@ $(".ship-btn").on("click", addShipStats)
 const $ulHome = $(".home-stat-list")
 
 const addHomeStats = () => {
+    //add toggle effect on click, ul slides up/down
+    $ulHome.slideToggle()
     $ulHome.html(
         `<li>Name: ${planet}</li>
         <li>Roatation period: ${homeStats.rotation_period}</li>
