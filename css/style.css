@@ -7,8 +7,10 @@
 /*----- HEADER SECTION -------*/
 header {
    text-align: center;
-   margin: 50px auto 30px auto;
-   max-width: 700px;
+   background-image: url("./hyperspaceimg.jpg");
+   background-position: center;
+   background-color: #000;
+   height: 200px;
 }
 
 /*----- MAIN SECTION -------*/
