@@ -51,7 +51,7 @@ function getCharStats(e) {
             //func to get homeworld's info 
             getHomeWorld()
             //films url array
-            console.log(charStats.results[0].films)
+            // console.log(charStats.results[0].films)
             filmsArr = charStats.results[0].films
             //change h2 to char's name
             addName()
@@ -173,6 +173,12 @@ $(".home-btn").on("click", addHomeStats)
 // Films stats section/////
 ///////////////////////////
 
-// function getFilmStats() {
-//     
-// }
+const addFilmStats = () => {
+    for (let film of filmsArr){
+        console.log(film)
+    }
+
+}
+
+//event listener for button for film stats
+$(".film-btn").on("click", addFilmStats)
