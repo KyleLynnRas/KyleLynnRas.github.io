@@ -46,3 +46,21 @@ form {
 ul {
     list-style: none;
 }
+
+/*----- SHIP STATS -------*/
+
+.ship-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.ship-img {
+    margin-bottom: 10px;
+}
+
+.ship-btn {
+    margin-bottom: 5px;
+}
