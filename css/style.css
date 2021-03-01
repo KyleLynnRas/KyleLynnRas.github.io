@@ -54,7 +54,7 @@ ul {
 
 /*----- SHIP STATS -------*/
 
-.ship-stats {
+.ship-stats-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -69,5 +69,25 @@ ul {
 }
 
 .ship-btn {
+    margin-bottom: 5px;
+}
+
+/*----- SHIP STATS -------*/
+
+.homeworld-stats-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.home-img {
+    margin-bottom: 10px;
+    width: 50%;
+    max-width: 200px;
+}
+
+.home-btn {
     margin-bottom: 5px;
 }
