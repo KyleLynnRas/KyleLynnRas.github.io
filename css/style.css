@@ -20,7 +20,7 @@ form {
 }
 
 .char-name {
-    margin-bottom: 15px;;
+    margin-bottom: 15px;
 }
 
 /*----- CHAR STATS -------*/
@@ -30,9 +30,19 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 15px;
 }
 
+.char-img {
+    margin-bottom: 10px;
+}
 
+/*--char stats button--*/
+.char-stats {
+    margin-bottom: 5px;
+}
+
+/*--char/ship stats list--*/
 ul {
     list-style: none;
 }
