@@ -152,9 +152,13 @@ $(".ship-btn").on("click", addShipStats)
 const $ulHome = $(".home-stat-list")
 
 const addHomeStats = () => {
-    console.log(homeStats.name)
     $ulHome.html(
-        `<li>Name: ${planet}</li>`
+        `<li>Name: ${planet}</li>
+        <li>Roatation period: ${homeStats.rotation_period}</li>
+        <li>Diameter: ${homeStats.diameter}</li>
+        <li>Climate: ${homeStats.climate}</li>
+        <li>Terrain: ${homeStats.terrain}</li>
+        <li>Population: ${homeStats.population}</li>`
     )
 }
 //event listener for button for homeworld stats
