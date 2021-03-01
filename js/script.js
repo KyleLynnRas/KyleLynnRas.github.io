@@ -14,7 +14,7 @@ let starShip
 let homeWorld
 let homeStats
 let planet
-
+let filmsArr
 
 //event listener func on submit button for char selection
 $(".submit").on("click", getCharStats)
@@ -43,13 +43,16 @@ function getCharStats(e) {
             alert("character not found, please try again")
         } else {
             // console.log(charStats.results[0].starships[0])
-            //starship url
+            //starship url (first starship)
             starShip = charStats.results[0].starships[0]
             //homeworld url
             // console.log(charStats.results[0].homeworld)
             homeWorld = charStats.results[0].homeworld
             //func to get homeworld's info 
             getHomeWorld()
+            //films url array
+            console.log(charStats.results[0].films)
+            filmsArr = charStats.results[0].films
             //change h2 to char's name
             addName()
             //clear input
@@ -165,3 +168,11 @@ const addHomeStats = () => {
 }
 //event listener for button for homeworld stats
 $(".home-btn").on("click", addHomeStats)
+
+////////////////////////////
+// Films stats section/////
+///////////////////////////
+
+// function getFilmStats() {
+//     
+// }
