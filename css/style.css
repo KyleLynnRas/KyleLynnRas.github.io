@@ -92,3 +92,23 @@ ul {
 .home-btn {
     margin-bottom: 5px;
 }
+
+/*----- FILM STATS -------*/
+
+.film-stats-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.film-img {
+    margin-bottom: 10px;
+    width: 50%;
+    max-width: 200px;
+}
+
+.film-btn {
+    margin-bottom: 5px;
+}
