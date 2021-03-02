@@ -102,12 +102,14 @@ function addStats() {
         })
 }
 
-//hide list when user click's on div container for ul
-$("div").on("click", hideStats)
+////slideToggle() - show/hide ul lists for stats sections/////
+//hide/show list when user clicks on div container for ul
+$(".toggle-container").on("click", hideStats)
 
 function hideStats() {
-    //ul slides up and down on click
-    $ul.slideToggle()
+    // console.log(this)
+    //.find travels down DOM tree from div to slideToggle() ul
+    $(this).find(".toggle").slideToggle()
 }
 
 //function to retrieve homeWorld info 
@@ -140,8 +142,6 @@ const addShipStats = () => {
     if (charStats.results[0].starships.length === 0){
         alert(`${charStats.results[0].name} doesn't have a starship`)
     } else {
-        //add toggle effect on click, ul slides up/down
-        $ulShip.slideToggle()
         $ulShip.html(
             `<li>Name: ${shipStats.name}</li>
             <li>Model: ${shipStats.model}</li>
@@ -165,8 +165,6 @@ $(".ship-btn").on("click", addShipStats)
 const $ulHome = $(".home-stat-list")
 
 const addHomeStats = () => {
-    //add toggle effect on click, ul slides up/down
-    $ulHome.slideToggle()
     $ulHome.html(
         `<li>Name: ${planet}</li>
         <li>Roatation period: ${homeStats.rotation_period}</li>
