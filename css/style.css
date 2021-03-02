@@ -46,12 +46,6 @@ form {
     margin-bottom: 5px;
 }
 
-/*--char/ship stats list--*/
-ul {
-    list-style: none;
-    width: 50%;
-    max-width: 200px;
-}
 
 /*----- SHIP STATS -------*/
 
@@ -113,7 +107,18 @@ ul {
     margin-bottom: 5px;
 }
 
-
-div {
+/*----DIV TOGGLE CONTAINER ---*/
+.toggle-container {
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+
+/*--char/ship stats list--*/
+.toggle-container ul {
+    list-style: none;
+    width: 100%;
 }
