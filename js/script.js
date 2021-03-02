@@ -88,8 +88,6 @@ function addStats() {
         shipStats = stats
         console.log(shipStats)
         // console.log(shipStats.name)
-        //add toggle effect on click, ul slides up/down
-        $ul.slideToggle()
         //add stats to DOM 
         $ul.html(
             `<li> Birth year: ${charStats.results[0].birth_year} </li>
@@ -102,6 +100,14 @@ function addStats() {
         function(error) {
         console.log(error)
         })
+}
+
+//hide list when user click's on div container for ul
+$("div").on("click", hideStats)
+
+function hideStats() {
+    //ul slides up and down on click
+    $ul.slideToggle()
 }
 
 //function to retrieve homeWorld info 
