@@ -61,6 +61,10 @@ function getCharStats(e) {
             $ul.html("")
             //clear prior ship stats
             $ulShip.html("")
+            //clear prior homeworld stats
+            $ulHome.html("")
+            //clear prior film stats
+            $ulFilm.html("")
         }
     }, 
     //error:
