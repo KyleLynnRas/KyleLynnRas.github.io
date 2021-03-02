@@ -180,7 +180,11 @@ const addFilmStats = () => {
         // console.log(film)
         $.ajax(film)
             .then(function(filmStats) {
-                console.log(filmStats.title)
+                // console.log(filmStats.title)
+                //create new li on each loop with film title
+                let $newFilm = $(`<li>Title: ${filmStats.title}</li>`)
+                //render new li to DOM
+                $ulFilm.append($newFilm)
             },
             function(error) {
                 console.log(error)
