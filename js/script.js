@@ -262,11 +262,19 @@ const runGame = (e) =>{
     }
     //vader has a random damage value between 3-8 
     vader.damage = Math.floor(Math.random() * (8-3)) + 3
-    console.log(vader.damage)
+    // console.log(vader.damage)
 
-    //run fire functions for pilot1 and vader
-    pilot1.fire(vader)
-    vader.fire(pilot1)
+    //run fire method for pilot1 and vader
+    //pilot1 fires first 
+    pilot1.fire(vader) 
+    //if both have health, vader fire 
+    if (pilot1.health > 0 & vader.health > 0) {
+        vader.fire(pilot1)
+    //if either at or below 0, game ends 
+    } else if (pilot1.health <= 0 || vader.health <=0 ){
+        console.log(`end of game: ${pilot1.health} ${vader.health}`)
+    }
+
     console.log(pilot1, vader)
 }
 
