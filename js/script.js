@@ -252,7 +252,10 @@ const runGame = (e) =>{
 if (e.target.className === "move-one move"){
    pilot1.damage = 3
    console.log(pilot1)
-    }
+} else if (e.target.className === "move-two move") {
+    pilot1.damage = 5
+    console.log(pilot1)
+}
 }
 
 //event listener using event delegation on game-buttons container
