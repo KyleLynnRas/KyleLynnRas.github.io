@@ -215,18 +215,26 @@ $(".film-btn").on("click", addFilmStats)
 ////////////////////////////
 // Game section////////////
 ///////////////////////////
+
+let damage
+
 class Pilot {
-    constructor(name, ship, move){
+    constructor(name, ship, health){
         this.name = name, 
         this.ship = ship, 
-        this.move = move
+        this.health = health
+    }
+    fire(challenger) {
+        challenger.health = challenger.health - damage
     }
 }
 
-$(".move-one").on("click", testFunc)
+$(".game-start").on("click", charCreate)
 
-//make button/func to choose char/start game
-function testFunc() {
-    const pilot1 = new Pilot(charSelect, shipSelect, "speed")
+//make button/func to create characters for game
+function charCreate() {
+    const pilot1 = new Pilot(charSelect, shipSelect, 15)
     console.log(pilot1)
+    const vader = new Pilot("Darth Vader", "TIE fighter", 20)
+    console.log(vader)
 }
