@@ -15,6 +15,7 @@ let homeWorld
 let homeStats
 let planet
 let filmsArr
+let charSelect 
 
 //event listener func on submit button for char selection
 $(".submit").on("click", getCharStats)
@@ -65,6 +66,9 @@ function getCharStats(e) {
             $ulHome.html("")
             //clear prior film stats
             $ulFilm.html("")
+            //char select for game
+            charSelect = charStats.results[0].name
+            console.log(charSelect)
         }
     }, 
     //error:
@@ -147,6 +151,7 @@ const addShipStats = () => {
             <li>Model: ${shipStats.model}</li>
             <li>Class: ${shipStats.starship_class}</li>
             <li>Hyperdrive Rating: ${shipStats.hyperdrive_rating}</li>
+            <li>Length: ${shipStats.length}</li>
             <li>Crew: ${shipStats.crew}</li>`
             )
     }
@@ -199,3 +204,25 @@ const addFilmStats = () => {
 
 //event listener for button for film stats
 $(".film-btn").on("click", addFilmStats)
+
+
+
+////////////////////////////
+// Game section////////////
+///////////////////////////
+class Pilot {
+    constructor(name, ship, move){
+        this.name = name, 
+        this.ship = ship, 
+        this.move = move
+    }
+}
+
+// const pilot1 = new Pilot(charSelect, "milleniumfal", "speed")
+
+$(".move-one").on("click", testFunc)
+
+function testFunc() {
+    const pilot1 = new Pilot(charSelect, "milleniumfal", "speed")
+    console.log(pilot1)
+}
