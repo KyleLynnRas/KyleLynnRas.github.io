@@ -248,14 +248,21 @@ $(".game-start").on("click", charCreate)
 
 //event listener function to run game on click
 const runGame = (e) =>{ 
-   console.log(e.target)
-if (e.target.className === "move-one move"){
-   pilot1.damage = 3
-   console.log(pilot1)
-} else if (e.target.className === "move-two move") {
-    pilot1.damage = 5
-    console.log(pilot1)
-}
+//    console.log(e.target)
+    //move-one selected:
+    if (e.target.className === "move-one move"){
+        //move will cause 3 damage
+        pilot1.damage = 3
+        console.log(pilot1)
+    //move-two selected:
+    } else if (e.target.className === "move-two move") {
+        //move will cause 5 damage
+        pilot1.damage = 5
+        console.log(pilot1)
+    }
+    //vader has a random damage value between 3-8 
+    vader.damage = Math.floor(Math.random() * (8-3)) + 3
+    console.log(vader.damage)
 }
 
 //event listener using event delegation on game-buttons container
