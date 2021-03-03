@@ -223,18 +223,28 @@ class Pilot {
         this.name = name, 
         this.ship = ship, 
         this.health = health
+        this.damage = damage
     }
     fire(challenger) {
-        challenger.health = challenger.health - damage
+        challenger.health = challenger.health - this.damage
     }
 }
 
 $(".game-start").on("click", charCreate)
 
-//make button/func to create characters for game
+//func to create characters for game
 function charCreate() {
     const pilot1 = new Pilot(charSelect, shipSelect, 15)
     console.log(pilot1)
     const vader = new Pilot("Darth Vader", "TIE fighter", 20)
     console.log(vader)
 }
+
+//event listener function to run game on click
+const runGame = (e) =>{ 
+   console.log(e.target)
+}
+
+//event listener using event delegation on game-buttons container
+$("div.game-buttons").on("click", "button.move", runGame)
+
