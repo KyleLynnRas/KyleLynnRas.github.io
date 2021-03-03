@@ -250,6 +250,7 @@ $(".game-start").on("click", charCreate)
 const runGame = (e) =>{ 
    console.log(e.target)
 if (e.target.className === "move-one move"){
+   pilot1.damage = 3
    console.log(pilot1)
     }
 }
