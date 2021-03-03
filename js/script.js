@@ -253,16 +253,21 @@ const runGame = (e) =>{
     if (e.target.className === "move-one move"){
         //move will cause 3 damage
         pilot1.damage = 3
-        console.log(pilot1)
+        // console.log(pilot1)
     //move-two selected:
     } else if (e.target.className === "move-two move") {
         //move will cause 5 damage
         pilot1.damage = 5
-        console.log(pilot1)
+        // console.log(pilot1)
     }
     //vader has a random damage value between 3-8 
     vader.damage = Math.floor(Math.random() * (8-3)) + 3
     console.log(vader.damage)
+
+    //run fire functions for pilot1 and vader
+    pilot1.fire(vader)
+    vader.fire(pilot1)
+    console.log(pilot1, vader)
 }
 
 //event listener using event delegation on game-buttons container
