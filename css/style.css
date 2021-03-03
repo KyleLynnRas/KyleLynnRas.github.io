@@ -139,6 +139,12 @@ form {
     main {
         display: flex;
         justify-content: space-around;
-        margin-top: 50px;
+        margin-top: 90px;
+    }
+
+    .char-img, .ship-img, .home-img, 
+    .film-img {
+        width: 200px;
+        margin-top: 0px;
     }
 }
