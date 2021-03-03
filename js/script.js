@@ -230,19 +230,28 @@ class Pilot {
     }
 }
 
-$(".game-start").on("click", charCreate)
+//variables for two game characters
+let pilot1
+let vader
 
-//func to create characters for game
-function charCreate() {
-    const pilot1 = new Pilot(charSelect, shipSelect, 15)
+//func to create character values for game
+const charCreate = () => {
+    pilot1 = new Pilot(charSelect, shipSelect, 15, 10)
     console.log(pilot1)
-    const vader = new Pilot("Darth Vader", "TIE fighter", 20)
+    vader = new Pilot("Darth Vader", "TIE fighter", 20)
     console.log(vader)
 }
+
+
+//event listener, charCreate on click "start game btn"
+$(".game-start").on("click", charCreate)
 
 //event listener function to run game on click
 const runGame = (e) =>{ 
    console.log(e.target)
+if (e.target.className === "move-one move"){
+   console.log(pilot1)
+    }
 }
 
 //event listener using event delegation on game-buttons container
