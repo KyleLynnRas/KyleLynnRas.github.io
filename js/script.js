@@ -16,6 +16,7 @@ let homeStats
 let planet
 let filmsArr
 let charSelect 
+let shipSelect
 
 //event listener func on submit button for char selection
 $(".submit").on("click", getCharStats)
@@ -42,6 +43,9 @@ function getCharStats(e) {
         //error alert if it returns a blank array/char not found
         if (charStats.results.length === 0) {
             alert("character not found, please try again")
+         //if char doesn't have starship stats, error alert
+        } else if (charStats.results[0].starships.length === 0){
+            alert(`${charStats.results[0].name} isn't a pilot, please select a character who flies a starship`)
         } else {
             // console.log(charStats.results[0].starships[0])
             //starship url (first starship)
@@ -68,7 +72,7 @@ function getCharStats(e) {
             $ulFilm.html("")
             //char select for game
             charSelect = charStats.results[0].name
-            console.log(charSelect)
+            // console.log(charSelect)
         }
     }, 
     //error:
@@ -90,7 +94,8 @@ function addStats() {
     //success
     .then(function(stats) {
         shipStats = stats
-        console.log(shipStats)
+        // console.log(shipStats)
+        shipSelect = shipStats.name
         // console.log(shipStats.name)
         //add stats to DOM 
         $ul.html(
@@ -218,11 +223,10 @@ class Pilot {
     }
 }
 
-// const pilot1 = new Pilot(charSelect, "milleniumfal", "speed")
-
 $(".move-one").on("click", testFunc)
 
+//make button/func to choose char/start game
 function testFunc() {
-    const pilot1 = new Pilot(charSelect, "milleniumfal", "speed")
+    const pilot1 = new Pilot(charSelect, shipSelect, "speed")
     console.log(pilot1)
 }
