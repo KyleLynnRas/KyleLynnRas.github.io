@@ -33,11 +33,16 @@ h1 {
     padding-top: 20px;
     padding-bottom: 1px;
     background-color: rgba(121, 117, 117, 0.075);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .about-text {
-    text-align: center;
-    margin: 40px;
     font-family: 'Raleway', verdana, sans-serif;
+    max-width: 400px;
+    margin-top: 40px;
+    line-height: 1.5;
+    text-align: center;
 }
 
 /*----- MAIN SECTION -------*/
@@ -46,7 +51,7 @@ h1 {
 form {
     text-align: center;
     margin-bottom: 40px;
-    padding-top: 10px;
+    padding-top: 20px;
     padding-bottom: 30px;
     background-color: rgba(121, 117, 117, 0.075);
 }
