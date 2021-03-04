@@ -31,7 +31,8 @@ h1 {
 /*----- ABOUT SECTION -------*/
 .about-text {
     text-align: center;
-    margin-top: 20px;
+    margin: 40px;
+    font-family: 'Raleway', verdana, sans-serif;
 }
 
 
