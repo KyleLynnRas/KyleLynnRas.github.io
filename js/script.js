@@ -234,6 +234,7 @@ class Pilot {
 let pilot1
 let vader
 let $p = $(".results")
+let $p2 = $(".results2")
 //func to create character values for game
 const charCreate = () => {
     pilot1 = new Pilot(charSelect, shipSelect, 15, 10)
@@ -278,7 +279,14 @@ const runGame = (e) =>{
     //results to DOM 
     //if both still have health print health status
     if (pilot1.health > 0 & vader.health > 0){
-        $p.text(`${pilot1.name} has ${pilot1.health} health left. ${vader.name} has ${vader.health} health left`)
+        $p.text(`${pilot1.name} has ${pilot1.health} health left`)
+        $p2.text(`${vader.name} has ${vader.health} health left`)
+    } else if(pilot1.health <= 0 ){
+        $p.text(`${vader.name} in the ${vader.ship} has defeated you!`)
+        $p2.text("")
+    } else if(vader.health <= 0) {
+        $p.text(`${pilot1.name} in the ${pilot1.ship} has won!`)
+        $p2.text("")
     }
     console.log(pilot1, vader)
 }
