@@ -284,13 +284,13 @@ const runGame = (e) =>{
         $p.text(`${pilot1.name} has ${pilot1.health} health left`).css({"font-size": "20px", "font-family": "Raleway"})
         $p2.text(`${vader.name} has ${vader.health} health left`).css({"font-size": "20px", "font-family": "Raleway"})
     } else if(pilot1.health <= 0 ){
-        $p.text(`${vader.name} in the ${vader.ship} has defeated you!`).css({"font-family": "Raleway"})
+        $p.text(`${vader.name} has defeated you with his ${vader.ship}`).css({"font-family": "Raleway"})
         $p2.text("")
     } else if(vader.health <= 0) {
-        $p.text(`${pilot1.name} in the ${pilot1.ship} has won!`).css({"font-family": "Raleway"})
+        $p.text(`${pilot1.name} has won with the ${pilot1.ship}!`).css({"font-family": "Raleway"})
         $p2.text("")
     }
-    console.log(pilot1, vader)
+    // console.log(pilot1, vader)
 }
 
 //event listener using event delegation on game-buttons container
