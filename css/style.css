@@ -241,6 +241,10 @@ form {
     padding-bottom: 40px;
 }
 
+.move {
+    padding: 3px;
+}
+
 
 /*----- MEDIA QUERY SECTION -------*/
 @media screen and (min-width: 769px) {
