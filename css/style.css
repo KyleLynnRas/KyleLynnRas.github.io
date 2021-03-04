@@ -62,6 +62,9 @@ form {
     margin-bottom: 5px;
 }
 
+.char-btn:hover {
+    transform: scale(1.5);
+}
 
 /*----- SHIP STATS -------*/
 
@@ -81,6 +84,10 @@ form {
 
 .ship-btn {
     margin-bottom: 5px;
+}
+
+.ship-btn:hover {
+    transform: scale(1.5);
 }
 
 /*----- SHIP STATS -------*/
@@ -103,6 +110,10 @@ form {
     margin-bottom: 5px;
 }
 
+.home-btn:hover {
+    transform: scale(1.5);
+}
+
 /*----- FILM STATS -------*/
 
 .film-stats-container {
@@ -121,6 +132,10 @@ form {
 
 .film-btn {
     margin-bottom: 5px;
+}
+
+.film-btn:hover {
+    transform: scale(1.5);
 }
 
 /*----DIV TOGGLE CONTAINER ---*/
