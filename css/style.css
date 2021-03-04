@@ -136,14 +136,21 @@ form {
 
 /*----- GAME SECTION -------*/
 
+.intro-game-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
 .game-ships {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 60px;
 }
-
-
 
 
 /*----- MEDIA QUERY SECTION -------*/
