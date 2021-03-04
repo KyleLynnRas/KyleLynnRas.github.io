@@ -183,11 +183,14 @@ form {
         justify-content: space-around;
         margin-top: 90px;
     }
-
+    /*--images for stats above--*/
     .char-img, .ship-img, .home-img, 
     .film-img {
         width: 200px;
         margin-top: 0px;
     }
-
+    /*--images for ships in game section--*/
+    .rebel-ship-img, .tie-fighter-img {
+        width: 250px;
+    }
 }
