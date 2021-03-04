@@ -217,6 +217,11 @@ form {
     color: rgb(86, 210, 231);
 }
 
+.game-start:hover {
+    color: black;
+    background: rgb(86, 210, 231);
+}
+
 .yoda-text {
     margin-top: 20px;
     font-weight: 600;
@@ -251,17 +256,24 @@ form {
     width: 175px;
 }
 
+/*--container for game buttons--*/
 .game-buttons {
     margin: 40px;
     text-align: center;
     padding-bottom: 40px;
 }
+
 /*--btn class for both--*/
 .move {
     padding: 5px;
     background-color: rgb(86, 210, 231);
     font-family: 'Raleway', verdana, sans-serif;
     font-weight: 600;
+}
+
+.move:hover {
+    color: rgb(86, 210, 231);
+    background: black;
 }
 
 .move-one {
