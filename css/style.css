@@ -65,7 +65,7 @@ form {
 }
 
 .char-btn {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .char-btn:hover {
@@ -89,7 +89,7 @@ form {
 }
 
 .ship-btn {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .ship-btn:hover {
@@ -113,7 +113,7 @@ form {
 }
 
 .home-btn {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .home-btn:hover {
@@ -137,7 +137,7 @@ form {
 }
 
 .film-btn {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .film-btn:hover {
