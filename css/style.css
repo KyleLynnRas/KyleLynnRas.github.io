@@ -144,12 +144,22 @@ form {
     margin-top: 50px;
 }
 
+.results {
+    margin: 40px;
+    font-size: 30px;
+}
+
 .game-ships {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 60px;
+}
+
+.game-buttons {
+    margin: 30px;
+    text-align: center;
 }
 
 
