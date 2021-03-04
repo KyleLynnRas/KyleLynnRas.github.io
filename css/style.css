@@ -29,6 +29,10 @@ h1 {
 }
 
 /*----- ABOUT SECTION -------*/
+.about-section {
+    padding: 40px;
+    background-color: rgba(121, 117, 117, 0.075);
+}
 .about-text {
     text-align: center;
     margin: 40px;
@@ -41,6 +45,8 @@ h1 {
 form {
     text-align: center;
     margin-bottom: 40px;
+    padding: 40px;
+    background-color: rgba(121, 117, 117, 0.075);
 }
 
 .char-input {
@@ -167,7 +173,7 @@ form {
     width: 140px;
     /*match icons*/
     background: rgb(25, 25, 25);
-    color: gold;
+    color: rgb(86, 210, 231);
     border: 5px solid grey;
 }
 
@@ -180,6 +186,9 @@ form {
 
 
 /*----- GAME SECTION -------*/
+.game-section {
+    background-color: rgba(121, 117, 117, 0.075);
+}
 
 .intro-game-section {
     display: flex;
