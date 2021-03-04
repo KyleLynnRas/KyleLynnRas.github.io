@@ -30,7 +30,8 @@ h1 {
 
 /*----- ABOUT SECTION -------*/
 .about-section {
-    padding: 40px;
+    padding-top: 20px;
+    padding-bottom: 1px;
     background-color: rgba(121, 117, 117, 0.075);
 }
 .about-text {
@@ -45,7 +46,8 @@ h1 {
 form {
     text-align: center;
     margin-bottom: 40px;
-    padding: 40px;
+    padding-top: 10px;
+    padding-bottom: 30px;
     background-color: rgba(121, 117, 117, 0.075);
 }
 
@@ -208,6 +210,10 @@ form {
     font-weight: 600;
 }
 
+.yoda-text {
+    margin-top: 20px;
+}
+
 .results {
     margin: 10px;
     font-size: 20px;
@@ -232,6 +238,7 @@ form {
 .game-buttons {
     margin: 30px;
     text-align: center;
+    padding-bottom: 40px;
 }
 
 
