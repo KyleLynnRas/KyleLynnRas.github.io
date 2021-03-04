@@ -134,6 +134,18 @@ form {
 }
 
 
+/*----- GAME SECTION -------*/
+
+.game-ships {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
 /*----- MEDIA QUERY SECTION -------*/
 @media screen and (min-width: 769px) {
     main {
