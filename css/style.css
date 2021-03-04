@@ -144,9 +144,14 @@ form {
     margin-top: 50px;
 }
 
+/*--start game btn--*/
+.game-start {
+    margin-top: 30px;
+}
+
 .results {
-    margin: 40px;
-    font-size: 30px;
+    margin: 10px;
+    font-size: 20px;
 }
 
 .game-ships {
@@ -155,6 +160,14 @@ form {
     justify-content: center;
     align-items: center;
     margin-top: 60px;
+}
+
+.rebel-ship-img {
+    width: 175px;
+}
+
+.tie-fighter-img {
+    width: 175px;
 }
 
 .game-buttons {
