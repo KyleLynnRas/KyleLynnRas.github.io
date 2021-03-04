@@ -191,6 +191,8 @@ $(".home-btn").on("click", addHomeStats)
 const $ulFilm = $(".film-stat-list")
 //event listener func, loop through filmsArr and retrieve api info/add to DOM on click
 const addFilmStats = () => {
+    // clear ul before, so if click title again it won't add a second set of li's
+    $ulFilm.html("")
     for (let film of filmsArr){
         // console.log(film)
         $.ajax(film)
