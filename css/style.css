@@ -74,7 +74,7 @@ form {
     margin-top: 15px;
 }
 
-/*----- CHAR STATS -------*/
+/*----- STATS SECTION -------*/
 
 .char-stats-container, .ship-stats-container,
 .homeworld-stats-container, .film-stats-container {
@@ -94,66 +94,6 @@ form {
 
 .char-btn, .ship-btn, 
 .home-btn, .film-btn {
-    margin-bottom: 10px;
-}
-
-/*----- SHIP STATS -------*/
-
-.ship-stats-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.ship-img {
-    margin-bottom: 10px;
-    width: 50%;
-    max-width: 200px;
-}
-
-.ship-btn {
-    margin-bottom: 10px;
-}
-
-/*----- SHIP STATS -------*/
-
-.homeworld-stats-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.home-img {
-    margin-bottom: 10px;
-    width: 50%;
-    max-width: 200px;
-}
-
-.home-btn {
-    margin-bottom: 10px;
-}
-
-/*----- FILM STATS -------*/
-
-.film-stats-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.film-img {
-    margin-bottom: 10px;
-    width: 50%;
-    max-width: 200px;
-}
-
-.film-btn {
     margin-bottom: 10px;
 }
 
