@@ -175,16 +175,18 @@ form {
 }
 
 .rebel-ship-img {
+    margin-top: 20px;
     width: 175px;
 }
 
 .tie-fighter-img {
+    margin-bottom: 20px;
     width: 175px;
 }
 
 /*--container for game buttons--*/
 .game-buttons {
-    margin-top: 40px;
+    margin-top: 50px;
     text-align: center;
     padding-bottom: 40px;
 }
