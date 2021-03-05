@@ -36,6 +36,7 @@ function getCharStats(e) {
     //success: 
     .then(function(stats) {
         console.log(stats)
+        charStats = stats
         //error alert if it returns a blank array/char not found
         if (charStats.results.length === 0) {
             alert("character not found, please try again")
@@ -43,7 +44,6 @@ function getCharStats(e) {
         } else if (charStats.results[0].starships.length === 0){
             alert(`${charStats.results[0].name} isn't a pilot, please select a character who flies a starship`)
         } else {
-            charStats = stats
             // console.log(charStats.results[0].starships[0])
             //starship url (first starship)
             starShip = charStats.results[0].starships[0]
@@ -147,10 +147,6 @@ const $ulShip = $(".ship-stat-list")
 
 //event listener func to add ship stats to DOM on click
 const addShipStats = () => {
-    //if char doesn't have starship stats, error alert
-    if (charStats.results[0].starships.length === 0){
-        alert(`${charStats.results[0].name} doesn't have a starship`)
-    } else {
         $ulShip.html(
             `<li>Name: ${shipStats.name}</li>
             <li>Model: ${shipStats.model}</li>
@@ -160,7 +156,7 @@ const addShipStats = () => {
             <li>Crew: ${shipStats.crew}</li>`
             )
     }
-}
+
 
 //event listener for button for ship stats
 $(".ship-btn").on("click", addShipStats)
