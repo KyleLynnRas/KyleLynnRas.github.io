@@ -17,9 +17,9 @@ This app displays facts about Star Wars pilots including information about their
 ---
 
 ##### *Stats dashboard*
-![stats dashboard](https://i.imgur.com/6iJxGHR.png)
+![stats dashboard](https://i.imgur.com/C0TyXg9.png)
 ##### *Stats*
-![basic stats](https://i.imgur.com/0fl6qgp.png)
+![basic stats](https://i.imgur.com/RHb5k98.png)
 ##### *Game*
 ![game mode](https://i.imgur.com/mj6J9Lu.png)
 
