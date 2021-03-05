@@ -103,7 +103,7 @@ function addStats() {
             <li> Eye color: ${charStats.results[0].eye_color} </li>
             <li> Height: ${charStats.results[0].height} </li>
             <li> Starship: ${shipStats.name} </li>
-            <li> Homeworld: ${planet} </li>`)
+            <li> Home world: ${planet} </li>`)
         }, 
         //error
         function(error) {
