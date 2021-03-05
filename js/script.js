@@ -268,10 +268,10 @@ const runGame = (e) =>{
     //if both have health, vader fire 
     if (pilot1.health > 0 & vader.health > 0) {
         vader.fire(pilot1)
-    //if either at or below 0, game ends 
-    // } else if (pilot1.health <= 0 || vader.health <=0 ){
-    //     console.log(`end of game: ${pilot1.health} ${vader.health}`)
-    // }
+    // if either at or below 0, game ends 
+    } else if (pilot1.health <= 0 || vader.health <=0 ){
+        console.log(`end of game: ${pilot1.health} ${vader.health}`)
+    }
 
     //results to DOM 
     //if both still have health print health status
@@ -287,7 +287,7 @@ const runGame = (e) =>{
     }
     // console.log(pilot1, vader)
     }
-}
+
 
 //event listener using event delegation on game-buttons container
 $("div.game-buttons").on("click", "button.move", runGame)
