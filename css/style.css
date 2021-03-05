@@ -242,7 +242,7 @@ form {
 
 /*--container for game buttons--*/
 .game-buttons {
-    margin: 40px;
+    margin-top: 40px;
     text-align: center;
     padding-bottom: 40px;
 }
@@ -263,6 +263,13 @@ form {
 .move-one {
     margin-right: 10px;
 }
+
+/*----- FOOTER SECTION -------*/
+.footer {
+    background: black;
+    height: 60px;
+}
+
 
 /*----- MEDIA QUERY SECTION -------*/
 @media screen and (min-width: 769px) {
