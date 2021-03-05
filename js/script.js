@@ -20,9 +20,6 @@ let shipSelect
 
 //event listener func on submit button for char selection
 $(".submit").on("click", getCharStats)
-//event listener for button for char stats 
-$(".char-btn").on("click", addStats)
-
 
 //event listener for retrieving character data 
 function getCharStats(e) {
@@ -39,7 +36,6 @@ function getCharStats(e) {
     //success: 
     .then(function(stats) {
         console.log(stats)
-        charStats = stats
         //error alert if it returns a blank array/char not found
         if (charStats.results.length === 0) {
             alert("character not found, please try again")
@@ -47,6 +43,7 @@ function getCharStats(e) {
         } else if (charStats.results[0].starships.length === 0){
             alert(`${charStats.results[0].name} isn't a pilot, please select a character who flies a starship`)
         } else {
+            charStats = stats
             // console.log(charStats.results[0].starships[0])
             //starship url (first starship)
             starShip = charStats.results[0].starships[0]
@@ -86,6 +83,9 @@ function getCharStats(e) {
 function addName() {
     $charName.text(charStats.results[0].name)
 }
+
+//event listener for button for char stats 
+$(".char-btn").on("click", addStats)
 
 //event listener func, retrieves ship stats and adds basic stats to DOM on click 
 function addStats() {
@@ -245,7 +245,6 @@ const charCreate = () => {
     console.log(vader)
 }
 
-
 //event listener, charCreate on click "start game btn"
 $(".game-start").on("click", charCreate)
 
@@ -274,9 +273,9 @@ const runGame = (e) =>{
     if (pilot1.health > 0 & vader.health > 0) {
         vader.fire(pilot1)
     //if either at or below 0, game ends 
-    } else if (pilot1.health <= 0 || vader.health <=0 ){
-        console.log(`end of game: ${pilot1.health} ${vader.health}`)
-    }
+    // } else if (pilot1.health <= 0 || vader.health <=0 ){
+    //     console.log(`end of game: ${pilot1.health} ${vader.health}`)
+    // }
 
     //results to DOM 
     //if both still have health print health status
@@ -291,6 +290,7 @@ const runGame = (e) =>{
         $p2.text("")
     }
     // console.log(pilot1, vader)
+    }
 }
 
 //event listener using event delegation on game-buttons container
