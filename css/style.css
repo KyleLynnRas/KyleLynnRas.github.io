@@ -76,7 +76,8 @@ form {
 
 /*----- CHAR STATS -------*/
 
-.char-stats-container {
+.char-stats-container, .ship-stats-container,
+.homeworld-stats-container, .film-stats-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -84,13 +85,15 @@ form {
     margin-bottom: 15px;
 }
 
-.char-img {
+.char-img, .ship-img, 
+.home-img, .film-img {
     margin-bottom: 10px;
     width: 50%;
     max-width: 200px;
 }
 
-.char-btn {
+.char-btn, .ship-btn, 
+.home-btn, .film-btn {
     margin-bottom: 10px;
 }
 
