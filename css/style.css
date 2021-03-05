@@ -211,11 +211,12 @@ form {
 .footer {
     background: black;
     height: 60px;
+    border: 3px solid black;
 }
 
 
 /*----- MEDIA QUERY SECTION -------*/
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 825px) {
     main {
         display: flex;
         justify-content: space-around;
