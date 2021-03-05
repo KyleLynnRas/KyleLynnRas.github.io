@@ -1,6 +1,6 @@
 # Title 
 
-This app displays facts about Star Wars pilots including information about their ship, home world and films that they’ve appeared in. A character can can be selected to battle Darth Vader. It retrieves the info using the Star Wars API (SWAPI). Orignal images from Shutterstock.
+This app displays facts about Star Wars pilots including information about their ship, home world and films that they’ve appeared in. The selected pilot can battle Darth Vader in the game section. It retrieves information using the Star Wars API (SWAPI). Orignal images from Shutterstock.
 
 ### Technologies Used
 ---
