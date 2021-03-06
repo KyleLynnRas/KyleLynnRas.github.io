@@ -26,7 +26,7 @@ This app displays facts about Star Wars pilots including information about their
 ### Links
 ---
 
-* [Link to app](https://starshipstats.netlify.app/)  
+* [Link to app](https://starshippilots.netlify.app/)  
 * [Link to SWAPI](https://swapi.dev/)
 
 ### Future goals

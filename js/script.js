@@ -17,7 +17,8 @@ let planet
 let filmsArr
 let charSelect 
 let shipSelect
-
+let starShipString3
+let homeString3
 //event listener func on submit button for char selection
 $(".submit").on("click", getCharStats)
 
@@ -47,9 +48,20 @@ function getCharStats(e) {
             // console.log(charStats.results[0].starships[0])
             //starship url (first starship)
             starShip = charStats.results[0].starships[0]
+            // console.log(starShip)
+            let starShipString = starShip.split(":")
+            let starShipString2 = starShipString[0] + "s:"
+            // console.log(starShipString2)
+            let starShipString3 = starShipString2 + starShipString[1]
+            console.log(starShipString3)
             //homeworld url
-            // console.log(charStats.results[0].homeworld)
+            console.log(charStats.results[0].homeworld)
             homeWorld = charStats.results[0].homeworld
+            let homeString = homeWorld.split(":")
+            let homeString2 = homeString[0] + "s:"
+            console.log(homeString2)
+            let homeString3 = homeString2 + homeString[1]
+            console.log(homeString3)
             //func to get homeworld's info 
             getHomeWorld()
             //films url array
@@ -90,7 +102,7 @@ $(".char-btn").on("click", addStats)
 //event listener func, retrieves ship stats and adds basic stats to DOM on click 
 function addStats() {
     //pulls first starship's info for char chosen
-    $.ajax(starShip)
+    $.ajax(starShipString3)
     //success
     .then(function(stats) {
         shipStats = stats
@@ -125,7 +137,7 @@ function hideStats(e) {
 //function to retrieve homeWorld info 
 function getHomeWorld() {
     //pull homeworld's info for char chosen 
-    $.ajax(homeWorld) 
+    $.ajax(homeString3) 
     //success
     .then(function(stats) {
         homeStats = stats
@@ -183,7 +195,7 @@ $(".home-btn").on("click", addHomeStats)
 ////////////////////////////
 // Films stats section/////
 ///////////////////////////
-
+let filmString3
 const $ulFilm = $(".film-stat-list")
 //event listener func, loop through filmsArr and retrieve api info/add to DOM on click
 const addFilmStats = () => {
@@ -191,7 +203,10 @@ const addFilmStats = () => {
     $ulFilm.html("")
     for (let film of filmsArr){
         // console.log(film)
-        $.ajax(film)
+        let filmString = film.split(":")
+        let filmString2 = filmString[0] + "s:"
+        let filmString3 = filmString2 + filmString[1]
+        $.ajax(filmString3)
             .then(function(filmStats) {
                 // console.log(filmStats.title)
                 //create new li on each loop with film title
