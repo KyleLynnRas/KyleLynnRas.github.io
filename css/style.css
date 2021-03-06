@@ -91,6 +91,11 @@ form {
     max-width: 200px;
 }
 
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
 /*-- generate and open/close toggle btns--*/
 .char-btn, .ship-btn, 
 .home-btn, .film-btn,
@@ -101,22 +106,24 @@ form {
     background-color: rgb(211, 208, 208);
 }
 
-/*----DIV TOGGLE CONTAINER ---*/
-/* .toggle-container {
-    padding: 5px;
+/*----STATS UL CONTAINER ---*/
+.ul-container {
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 140px;
+    max-width: 200px;
     /*match icons*/
-    /* background: rgb(25, 25, 25);
+    background: rgb(25, 25, 25);
     color: rgb(86, 210, 231);
-    border: 5px solid grey;
-} */ 
+    /* border: 5px solid grey; */
+    list-style: none;
+    width: 100%;
+} 
 
 /*--char/ship stats list--*/
-.toggle-container ul {
+.toggle {
     list-style: none;
     width: 100%;
     
@@ -234,12 +241,7 @@ form {
         width: 200px;
         margin-top: 0px;
     }
-    /*--transform scale on stats titles only for desktop--*/
-    .home-btn:hover, .film-btn:hover,
-    .char-btn:hover, .ship-btn:hover {
-        transform: scale(1.5);
-    }
-    /*--images for ships in game section--*/
+    /*--images for ships in game section-- */
     .rebel-ship-img, .tie-fighter-img {
         width: 250px;
     }
