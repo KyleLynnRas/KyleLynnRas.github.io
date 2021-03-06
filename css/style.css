@@ -91,6 +91,10 @@ form {
     max-width: 200px;
 }
 
+.toggle-container {
+   text-align: center;
+}
+
 /*-- generate and open/close toggle btns--*/
 .char-btn, .ship-btn, 
 .home-btn, .film-btn,
@@ -102,9 +106,15 @@ form {
     background-color: rgb(211, 208, 208);
 }
 
+.char-btn:hover, .ship-btn:hover, 
+.home-btn:hover, .film-btn:hover,
+.toggle-btn:hover {
+    color: black;
+    background: rgb(86, 210, 231);
+}
+
 /*---- STATS UL-----*/
 .toggle {
-    display: none;
     padding: 2px;
     margin-top: 10px;
     max-width: 200px;
