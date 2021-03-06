@@ -91,11 +91,6 @@ form {
     max-width: 200px;
 }
 
-.btn-container {
-    display: flex;
-    justify-content: center;
-}
-
 /*-- generate and open/close toggle btns--*/
 .char-btn, .ship-btn, 
 .home-btn, .film-btn,

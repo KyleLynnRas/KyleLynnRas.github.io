@@ -112,12 +112,15 @@ function addStats() {
 }
 
 ////slideToggle() - show/hide ul lists for stats sections/////
-//hide/show list when user clicks on open/close btn for ul
-$(".toggle-btn").on("click", hideStats)
+//hide/show list when user clicks on open/close btn for ul, el on container
+$(".toggle-container").on("click", hideStats)
 
-function hideStats() {
+function hideStats(e) {
+    //two btns in container, if toggle button clicked, slideToggle closest ul 
+    if (e.target.className === "toggle-btn"){
     // console.log(this)
-    $(".toggle").slideToggle()
+    $(this).find(".toggle").slideToggle()
+    }   
 }
 
 //function to retrieve homeWorld info 
