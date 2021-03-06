@@ -235,6 +235,15 @@ form {
 
 /*----- MEDIA QUERY SECTION -------*/
 @media screen and (min-width: 825px) {
+    /*--form--*/
+    .char-input {
+        padding: 3px;
+        font-size: 12px;
+    }
+    .submit {
+        padding: 5px;
+        font-size: 12px;
+    }
     main {
         display: flex;
         justify-content: space-around;
@@ -246,15 +255,31 @@ form {
         width: 200px;
         margin-top: 0px;
     }
+    .char-btn, .ship-btn, 
+    .home-btn, .film-btn,
+    .toggle-btn {
+        padding: 5px;
+        font-size: 12px;
+    }
+    .game-start {
+        height: 125px;
+        width: 125px;
+        font-size: 15px;
+    }
     /*--hover effect only for desktop--*/
     .game-start:hover {
-        transform: scale(1.5);
+        transform: scale(1.2);
     }
     .toggle-container {
         max-width: 200px;
     }
     /*--images for ships in game section-- */
     .rebel-ship-img, .tie-fighter-img {
-        width: 250px;
+        width: 275px;
+    }
+    /*--game buttons--*/
+    .move {
+       padding: 15px;
+       font-size: 15px;
     }
 }
