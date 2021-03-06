@@ -68,6 +68,11 @@ form {
     background-color: rgb(211, 208, 208);
 }
 
+.submit:hover {
+    color: black;
+    background: rgb(86, 210, 231);
+}
+
 .char-name {
     margin-bottom: 15px;
     margin-top: 15px;
