@@ -156,7 +156,6 @@ const addShipStats = () => {
             )
     }
 
-
 //event listener for button for ship stats
 $(".ship-btn").on("click", addShipStats)
 

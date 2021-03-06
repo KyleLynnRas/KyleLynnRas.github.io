@@ -91,9 +91,14 @@ form {
     max-width: 200px;
 }
 
+/*-- generate and open/close toggle btns--*/
 .char-btn, .ship-btn, 
-.home-btn, .film-btn {
-    margin-bottom: 10px;
+.home-btn, .film-btn,
+.toggle-btn {
+    padding: 2px;
+    font-family: 'Raleway', verdana, sans-serif;
+    font-weight: 600;
+    background-color: rgb(211, 208, 208);
 }
 
 /*----DIV TOGGLE CONTAINER ---*/
