@@ -98,6 +98,7 @@ form {
 
 .toggle-container {
    text-align: center;
+   max-width: 160px;
 }
 
 /*-- generate and open/close toggle btns--*/
@@ -120,6 +121,7 @@ form {
 
 /*---- STATS UL-----*/
 .toggle {
+    line-height: 1.5;
     padding: 2px;
     margin-top: 10px;
     max-width: 200px;
@@ -243,6 +245,13 @@ form {
     .film-img {
         width: 200px;
         margin-top: 0px;
+    }
+    /*--hover effect only for desktop--*/
+    .game-start:hover {
+        transform: scale(1.5);
+    }
+    .toggle-container {
+        max-width: 200px;
     }
     /*--images for ships in game section-- */
     .rebel-ship-img, .tie-fighter-img {
