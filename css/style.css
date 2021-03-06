@@ -95,34 +95,26 @@ form {
 .char-btn, .ship-btn, 
 .home-btn, .film-btn,
 .toggle-btn {
+    margin-top: 10px;
     padding: 2px;
     font-family: 'Raleway', verdana, sans-serif;
     font-weight: 600;
     background-color: rgb(211, 208, 208);
 }
 
-/*----STATS UL CONTAINER ---*/
-.ul-container {
+/*---- STATS UL-----*/
+.toggle {
+    padding: 2px;
     margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     max-width: 200px;
     /*match icons*/
     background: rgb(25, 25, 25);
     color: rgb(86, 210, 231);
-    /* border: 5px solid grey; */
+    border: 5px solid grey;
     list-style: none;
-    width: 100%;
+    width: 90%;
+    list-style: none;
 } 
-
-/*--char/ship stats list--*/
-.toggle {
-    list-style: none;
-    width: 100%;
-    
-}
 
 
 /*----- GAME SECTION -------*/
