@@ -234,6 +234,49 @@ form {
 
 
 /*----- MEDIA QUERY SECTION -------*/
+
+@media screen and (min-width: 480px) {
+      /*--form--*/
+    .char-input {
+        padding: 3px;
+        font-size: 12px;
+    }
+    .submit {
+        padding: 5px;
+        font-size: 12px;
+    }
+    /*--images for stats above--*/
+    .char-img, .ship-img, .home-img, 
+    .film-img {
+        width: 200px;
+        margin-top: 0px;
+    }
+    .char-btn, .ship-btn, 
+    .home-btn, .film-btn,
+    .toggle-btn {
+        padding: 5px;
+        font-size: 12px;
+    }
+    .game-start {
+        height: 110px;
+        width: 110px;
+        font-size: 15px;
+    }
+    .toggle-container {
+        max-width: 200px;
+    }
+    /*--images for ships in game section-- */
+    .rebel-ship-img, .tie-fighter-img {
+        width: 225px;
+    }
+    /*--game buttons--*/
+    .move {
+       padding: 10px;
+       font-size: 12px;
+    }
+}
+
+
 @media screen and (min-width: 825px) {
     /*--form--*/
     .char-input {
