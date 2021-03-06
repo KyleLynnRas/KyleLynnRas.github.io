@@ -97,7 +97,7 @@ form {
 }
 
 /*----DIV TOGGLE CONTAINER ---*/
-.toggle-container {
+/* .toggle-container {
     padding: 5px;
     display: flex;
     flex-direction: column;
@@ -105,10 +105,10 @@ form {
     align-items: center;
     width: 140px;
     /*match icons*/
-    background: rgb(25, 25, 25);
+    /* background: rgb(25, 25, 25);
     color: rgb(86, 210, 231);
     border: 5px solid grey;
-}
+} */ 
 
 /*--char/ship stats list--*/
 .toggle-container ul {
