@@ -97,6 +97,8 @@ function addStats() {
         // console.log(shipStats)
         shipSelect = shipStats.name
         // console.log(shipStats.name)
+        //slide toggle shows hidden ul on click, then open/close on click
+        $ul.slideToggle()
         //add stats to DOM 
         $ul.html(
             `<li> Birth year: ${charStats.results[0].birth_year} </li>
@@ -109,18 +111,6 @@ function addStats() {
         function(error) {
         console.log(error)
         })
-}
-
-////slideToggle() - show/hide ul lists for stats sections/////
-//hide/show list when user clicks on open/close btn for ul, el on container
-$(".toggle-container").on("click", hideStats)
-
-function hideStats(e) {
-    //two btns in container, if toggle button clicked, slideToggle closest ul 
-    if (e.target.className === "toggle-btn"){
-    // console.log(this)
-    $(this).find(".toggle").slideToggle()
-    }   
 }
 
 //function to retrieve homeWorld info 

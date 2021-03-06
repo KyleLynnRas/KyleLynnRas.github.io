@@ -104,6 +104,7 @@ form {
 
 /*---- STATS UL-----*/
 .toggle {
+    display: none;
     padding: 2px;
     margin-top: 10px;
     max-width: 200px;
