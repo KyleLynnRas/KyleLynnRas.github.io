@@ -52,7 +52,7 @@ function getCharStats(e) {
             let starShipString = starShip.split(":")
             let starShipString2 = starShipString[0] + "s:"
             // console.log(starShipString2)
-            let starShipString3 = starShipString2 + starShipString[1]
+            starShipString3 = starShipString2 + starShipString[1]
             console.log(starShipString3)
             //homeworld url
             console.log(charStats.results[0].homeworld)
@@ -60,7 +60,7 @@ function getCharStats(e) {
             let homeString = homeWorld.split(":")
             let homeString2 = homeString[0] + "s:"
             console.log(homeString2)
-            let homeString3 = homeString2 + homeString[1]
+            homeString3 = homeString2 + homeString[1]
             console.log(homeString3)
             //func to get homeworld's info 
             getHomeWorld()
@@ -106,7 +106,7 @@ function addStats() {
     //success
     .then(function(stats) {
         shipStats = stats
-        // console.log(shipStats)
+        console.log(shipStats)
         shipSelect = shipStats.name
         // console.log(shipStats.name)
         //add stats to DOM 
